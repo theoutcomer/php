@@ -1,0 +1,9 @@
+<?php
+$time=15;
+$url="http://editord.21jingji.com/admins/cron/getOldNews";
+/*
+  function
+*/
+sleep($time);
+file_get_contents($url);
+?>

@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+<title>jQuery文本编辑</title>
+<script src="./jquery-1.7.2.min.js">
+</script>
+
+<script>
+
+$(document).ready(function(){
+	$(window).unload(function(){
+		alert('aaaa');
+	});
+});
+
+
+$(document).ready(function(){
+    var tdNods = $("td");
+    tdNods.click(tdClick);
+});
+
+//td的点击事件
+function tdClick(){
+    //将td的文本内容保存
+    var td = $(this);
+    var tdText = td.text();
+    //将td的内容清空
+    td.empty();
+    //新建一个输入框
+    var input = $("<input size='4'>");
+    //将保存的文本内容赋值给输入框
+    input.attr("value",tdText);
+    //将输入框添加到td中
+    td.append(input);
+    //给输入框注册事件，当失去焦点时就可以将文本保存起来
+    input.blur(function(){
+        //将输入框的文本保存
+        var input = $(this);
+        var inputText = input.val();
+        //将td的内容，即输入框去掉,然后给td赋值
+        var td = input.parent("td");
+        td.html(inputText);
+        //让td重新拥有点击事件
+        td.click(tdClick);
+    });
+    //将输入框中的文本高亮选中
+    //将jquery对象转化为DOM对象
+    var inputDom = input.get(0);
+    inputDom.select();
+    //将td的点击事件移除
+    td.unbind("click");
+}
+
+
+	</script>
+
+    
+</head> 
+<body>
+<h1>Edit-in-Place with jQuery</h1>
+<div id="editInPlace">	
+<table width="100%">
+        <thead>
+	        <tr>
+		        <th style="background:#FF9900;" colspan="14"><h3>网站2013年原创稿件平均访问量</h3></th>
+	        </tr>
+            <tr>
+			<th width="50">栏目原创</th>
+			<th width="50">1月</th><th width="50">2月</th><th width="50">3月</th><th width="50">4月</th><th width="50">5月</th><th width="50">6月</th><th width="50">7月</th><th width="50">8月</th><th width="50">9月</th><th width="50">10月</th><th width="50">11月</th><th width="50">12月</th>			<th width="50">全年平均</th>
+
+            </tr>
+        </thead>
+<tbody>
+
+      	
+            <tr>
+        	
+			<td align="center">财经</td>
+			<td align="center">2613</td>
+			<td align="center">2744</td>
+			<td align="center">4318</td>
+			<td align="center">6462</td>
+			<td align="center">4469</td>
+			<td align="center">8431</td>
+			<td align="center">2289</td>
+			<td align="center">2900</td>
+			<td align="center">4095</td>
+			<td align="center">3848</td>
+			<td align="center">4116</td>
+			<td align="center">4048</td>
+			<td align="center">4194</td>
+	</tr>
+             <tr>
+        	
+			<td align="center">金融</td>
+			<td align="center">6433</td>
+			<td align="center">6411</td>
+			<td align="center">3816</td>
+			<td align="center">2420</td>
+			<td align="center">3367</td>
+			<td align="center">2616</td>
+			<td align="center">14924</td>
+			<td align="center">2900</td>
+			<td align="center">1691</td>
+			<td align="center">2368</td>
+			<td align="center">3292</td>
+			<td align="center">4008</td>
+			<td align="center">4521</td>
+	</tr>
+             <tr>
+        	
+			<td align="center">机构</td>
+			<td align="center">2174</td>
+			<td align="center">1392</td>
+			<td align="center">2737</td>
+			<td align="center">5304</td>
+			<td align="center">7019</td>
+			<td align="center">5692</td>
+			<td align="center">1756</td>
+			<td align="center">890</td>
+			<td align="center">1690</td>
+			<td align="center">2171</td>
+			<td align="center">1971</td>
+			<td align="center">1261</td>
+			<td align="center">2838</td>
+	</tr>
+             <tr>
+        	
+			<td align="center">科技·产业测试</td>
+			<td align="center">2538</td>
+			<td align="center">7717</td>
+			<td align="center">2564</td>
+			<td align="center">6379</td>
+			<td align="center">7178</td>
+			<td align="center">6999</td>
+			<td align="center">5532</td>
+			<td align="center">2600</td>
+			<td align="center">2885</td>
+			<td align="center">6864</td>
+			<td align="center">4771</td>
+			<td align="center">4660</td>
+			<td align="center">5057</td>
+	</tr>
+             <tr>
+        	
+			<td align="center">宏观</td>
+			<td align="center">292</td>
+			<td align="center">0</td>
+			<td align="center">1761</td>
+			<td align="center">5490</td>
+			<td align="center">1047</td>
+			<td align="center">1442</td>
+			<td align="center">71010</td>
+			<td align="center">3810</td>
+			<td align="center">589</td>
+			<td align="center">2433</td>
+			<td align="center">1209</td>
+			<td align="center">15815</td>
+			<td align="center">8742</td>
+	</tr>
+             <tr>
+        	
+			<td align="center">房产</td>
+			<td align="center">688</td>
+			<td align="center">14070</td>
+			<td align="center">3345</td>
+			<td align="center">2648</td>
+			<td align="center">3007</td>
+			<td align="center">4694</td>
+			<td align="center">3952</td>
+			<td align="center">1900</td>
+			<td align="center">3135</td>
+			<td align="center">7768</td>
+			<td align="center">6682</td>
+			<td align="center">3787</td>
+			<td align="center">4640</td>
+	</tr>
+             <tr>
+        	
+			<td align="center">汽车</td>
+			<td align="center">0</td>
+			<td align="center">0</td>
+			<td align="center">3668</td>
+			<td align="center">25190</td>
+			<td align="center">0</td>
+			<td align="center">0</td>
+			<td align="center">0</td>
+			<td align="center">7070</td>
+			<td align="center">1248</td>
+			<td align="center">2656</td>
+			<td align="center">495</td>
+			<td align="center">1505</td>
+			<td align="center">3486</td>
+	</tr>
+             <tr>
+        	
+			<td align="center">评论</td>
+			<td align="center">405</td>
+			<td align="center">360</td>
+			<td align="center">847</td>
+			<td align="center">872</td>
+			<td align="center">728</td>
+			<td align="center">924</td>
+			<td align="center">338</td>
+			<td align="center">527</td>
+			<td align="center">365</td>
+			<td align="center">128</td>
+			<td align="center">533</td>
+			<td align="center">190</td>
+			<td align="center">518</td>
+	</tr>
+             <tr>
+        	
+			<td align="center">生活</td>
+			<td align="center">2301</td>
+			<td align="center">3461</td>
+			<td align="center">3500</td>
+			<td align="center">3474</td>
+			<td align="center">2258</td>
+			<td align="center">2284</td>
+			<td align="center">4199</td>
+			<td align="center">2206</td>
+			<td align="center">3234</td>
+			<td align="center">2220</td>
+			<td align="center">3749</td>
+			<td align="center">2516</td>
+			<td align="center">2950</td>
+	</tr>
+             <tr>
+        	
+			<td align="center">快讯</td>
+			<td align="center">0</td>
+			<td align="center">0</td>
+			<td align="center">0</td>
+			<td align="center">0</td>
+			<td align="center">0</td>
+			<td align="center">0</td>
+			<td align="center">0</td>
+			<td align="center">3228</td>
+			<td align="center">632</td>
+			<td align="center">448</td>
+			<td align="center">213</td>
+			<td align="center">221</td>
+			<td align="center">395</td>
+	</tr>
+     	<tr>
+			<td align="center">汇总平均</td>
+			<td align="center">1744</td>
+			<td align="center">3616</td>
+			<td align="center">2656</td>
+			<td align="center">5824</td>
+			<td align="center">2907</td>
+			<td align="center">3308</td>
+			<td align="center">10400</td>
+			<td align="center">2803</td>
+			<td align="center">1956</td>
+			<td align="center">3090</td>
+			<td align="center">2703</td>
+			<td align="center">3801</td>
+			<td align="center">3734</td>
+	</tr>
+</tbody>
+     </table>
+</div>
+<br />
+</body>
+</html>

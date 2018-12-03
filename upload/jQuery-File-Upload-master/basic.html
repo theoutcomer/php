@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<!--
+/*
+ * jQuery File Upload Plugin Basic Demo
+ * https://github.com/blueimp/jQuery-File-Upload
+ *
+ * Copyright 2013, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+-->
+<html lang="en">
+<head>
+<!-- Force latest IE rendering engine or ChromeFrame if installed -->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+<meta charset="utf-8">
+<title>jQuery File Upload Demo - Basic version</title>
+<meta name="description" content="File Upload widget with multiple file selection, drag&amp;drop support and progress bar for jQuery. Supports cross-domain, chunked and resumable file uploads. Works with any server-side platform (PHP, Python, Ruby on Rails, Java, Node.js, Go etc.) that supports standard HTML form file uploads.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap styles -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!-- Generic page styles -->
+<link rel="stylesheet" href="css/style.css">
+<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+<link rel="stylesheet" href="css/jquery.fileupload.css">
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-fixed-top .navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://github.com/blueimp/jQuery-File-Upload">jQuery File Upload</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="https://github.com/blueimp/jQuery-File-Upload/tags">Download</a></li>
+                <li><a href="https://github.com/blueimp/jQuery-File-Upload">Source Code</a></li>
+                <li><a href="https://github.com/blueimp/jQuery-File-Upload/wiki">Documentation</a></li>
+                <li><a href="https://blueimp.net">&copy; Sebastian Tschan</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h1>jQuery File Upload Demo</h1>
+    <h2 class="lead">Basic version</h2>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="basic.html">Basic</a></li>
+        <li><a href="basic-plus.html">Basic Plus</a></li>
+        <li><a href="index.html">Basic Plus UI</a></li>
+        <li><a href="angularjs.html">AngularJS</a></li>
+        <li><a href="jquery-ui.html">jQuery UI</a></li>
+    </ul>
+    <br>
+    <blockquote>
+        <p>多文件选择文件上传控件，支持拖放，进度条，验证和jQuery的预览图像，音频和视频。
+支持跨域、分块和可恢复的文件上传客户端图像缩放。
+任何服务器端平台（PHP, Python, Ruby on Rails, Java, Node.js, Go etc.），支持标准的HTML表单上传文件。</p>
+    </blockquote>
+    <br>
+    <!-- The fileinput-button span is used to style the file input field as button -->
+    <span class="btn btn-success fileinput-button">
+        <i class="glyphicon glyphicon-plus"></i>
+        <span>Select files...</span>
+        <!-- The file input field used as target for the file upload widget -->
+        <input id="fileupload" type="file" name="files[]" multiple>
+    </span>
+    <br>
+    <br>
+    <!-- The global progress bar -->
+    <div id="progress" class="progress">
+        <div class="progress-bar progress-bar-success"></div>
+    </div>
+    <!-- The container for the uploaded files -->
+    <div id="files" class="files"></div>
+    <br>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">演示说明</h3>
+        </div>
+        <div class="panel-body">
+            <ul>
+                <li>在这个演示上传的最大文件大小为999 KB（默认的文件大小限制）。</li>
+                <li>只有图像文件（JPG，GIF，PNG）是在这个演示允许（默认情况下是没有文件类型的限制）。</li>
+                <li>上传的文件将自动删除后5分钟或更少（演示文件存储在内存中）。</li>
+                <li>您可以在这个网页上拖放文件从您的桌面（见浏览器支持）。</li>
+                <li>请参阅项目网站和文档以了解更多信息。</li>
+                <li>从Glyphicons引导的CSS框架和图标了。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="http://demo.phptest.com/js/jquery-1.7.2.min.js"></script>
+<!-- jQuery UI部件厂，可如果jQuery UI已包含略 -->
+<script src="js/vendor/jquery.ui.widget.js"></script>
+<!-- 模板插件包括渲染上传/下载列表 -->
+<script src="js/jquery.fileupload.js"></script>
+<!-- 基本文件上传插件 -->
+
+<script>
+/*jslint unparam: true */
+/*global window, $ */
+$(function () {
+    'use strict';
+    // Change this to the location of your server-side upload handler:
+    var url = window.location.hostname === 'blueimp.github.io' ?
+                '//jquery-file-upload.appspot.com/' : 'server/php/';
+    $('#fileupload').fileupload({
+        url: url,
+        dataType: 'json',
+        done: function (e, data) {
+            $.each(data.result.files, function (index, file) {
+                $('<p/>').text(file.name).appendTo('#files');
+            });
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);alert(progress);
+            $('#progress .progress-bar').css(
+                'width',
+                progress + '%'
+            ).html(progress+"%");
+        }
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+});
+</script>
+</body>
+</html>

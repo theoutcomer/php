@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="css/style.css" type="text/css" rel='stylesheet' />
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/money.js"></script>
+</head>
+<script type="text/javascript">
+	// Firefox, Google Chrome, Opera, Safari, Internet Explorer from version 9
+function OnInput (event) {
+	//alert ("The new content: " + event.target.value);
+	$('#cnMoney').html(changeNumMoneyToChinese2(event.target.value));
+}
+// Internet Explorer
+function OnPropChanged (event) {
+	if (event.propertyName.toLowerCase () == "value") {
+		$('#cnMoney').html(changeNumMoneyToChinese2(event.target.value));
+	}
+}     
+</script>
+
+<style media=print type="text/css">   
+.noprint{visibility:hidden}   
+ #head , #boot , #nav{display: none;}/*要隐藏掉的元素*/
+</style> 
+<body>
+<div id="wrapper"> 
+
+  <!--Body content-->
+  <div id="content" class="clearfix">
+    <div class="contentwrapper"><!--Content wrapper--> 
+      <!-- Build page from here: -->
+      <div>
+        <div>
+          <div class="page-header">
+            <h4><u>21世纪报系差旅费报销单</u></h4>
+            <h5><span> 单位:<input style="width:60px;"></span><span>部门/板块:<input style="width:35px;"></span><span> 报销日期</span><span><input style="width:35px;">年</span><span><input style="width:20px;">月</span><span><input style="width:20px;">日</span><span> 姓名:<input style="width:30px;"></span><span> 同行:<input style="width:30px;"></span></h5>
+          </div>
+          <table class="table1 table-bordered span600" style=" width:636px;">
+            <tbody>
+              <tr class="h21">
+                <td class="span53" colspan="2">出差日期</td>
+                <td class="span76" rowspan="2">起止地点</td>
+                <td class="span94" colspan="2">出差事由</td>
+                <td class="span252" colspan="5"><textarea></textarea></td>
+              </tr>
+              <tr class="h21">
+                <td class="span26" >月</td>
+                <td class="span26" >日</td>
+                <td class="span46">车船票</td>
+                <td class="span48">机票</td>
+                <td class="span54">市内交通</td>
+                <td class="span54">住宿费</td>
+                <td class="span45">其他</td>
+                <td class="span54">伙食补贴</td>
+                <td class="span45">备注</td>
+              </tr>
+              <tr class="h21">
+                <td class="span26" ><input style="width:25px;"></td>
+                <td class="span26" ><input style="width:25px;"></td>
+                <td class="span76"><textarea></textarea></td>
+                <td class="span46"><input style="width:45px;"></td>
+                <td class="span48"><input style="width:47px;"></td>
+                <td class="span54"><input style="width:53px;"></td>
+                <td class="span54"><input style="width:53px;"></td>
+                <td class="span45"><input style="width:44px;"></td>
+                <td class="span54"><input style="width:53px;"></td>
+                <td class="span45"><textarea></textarea></td>
+              </tr>
+              <tr class="h21">
+                <td class="span26" ><input style="width:25px;"></td>
+                <td class="span26" ><input style="width:25px;"></td>
+                <td class="span76"><textarea></textarea></td>
+                <td class="span46"><input style="width:45px;"></td>
+                <td class="span48"><input style="width:47px;"></td>
+                <td class="span54"><input style="width:53px;"></td>
+                <td class="span54"><input style="width:53px;"></td>
+                <td class="span45"><input style="width:44px;"></td>
+                <td class="span54"><input style="width:53px;"></td>
+                <td class="span45"><textarea></textarea></td>
+              </tr>
+              <tr class="h21">
+                <td class="span26" ><input style="width:25px;"></td>
+                <td class="span26" ><input style="width:25px;"></td>
+                <td class="span76"><textarea></textarea></td>
+                <td class="span46"><input style="width:45px;"></td>
+                <td class="span48"><input style="width:47px;"></td>
+                <td class="span54"><input style="width:53px;"></td>
+                <td class="span54"><input style="width:53px;"></td>
+                <td class="span45"><input style="width:44px;"></td>
+                <td class="span54"><input style="width:53px;"></td>
+                <td class="span45"><textarea></textarea></td>
+              </tr>
+              <tr class="h21">
+                <td class="span26" ><input style="width:25px;"></td>
+                <td class="span26" ><input style="width:25px;"></td>
+                <td class="span76"><textarea></textarea></td>
+                <td class="span46"><input style="width:45px;"></td>
+                <td class="span48"><input style="width:47px;"></td>
+                <td class="span54"><input style="width:53px;"></td>
+                <td class="span54"><input style="width:53px;"></td>
+                <td class="span45"><input style="width:44px;"></td>
+                <td class="span54"><input style="width:53px;"></td>
+                <td class="span45"><textarea></textarea></td>
+              </tr>
+              <tr class="h21">
+                <td class="span26" ><input style="width:25px;"></td>
+                <td class="span26" ><input style="width:25px;"></td>
+                <td class="span76"><textarea></textarea></td>
+                <td class="span46"><input style="width:45px;"></td>
+                <td class="span48"><input style="width:47px;"></td>
+                <td class="span54"><input style="width:53px;"></td>
+                <td class="span54"><input style="width:53px;"></td>
+                <td class="span45"><input style="width:44px;"></td>
+                <td class="span54"><input style="width:53px;"></td>
+                <td class="span45"><textarea></textarea></td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table2 table-bordered span600" style=" width:636px;">
+            <tbody>
+              <tr class="h21">
+                <td class="span532">报销金额</td>
+                <td class="span313 left">（大写）<span id="cnMoney">拾   万   仟   佰   拾  元   角  分</span>￥:<input style="width:70px;" id="moneyInt" oninput="OnInput (event)" onpropertychange="OnPropChanged (event)"></td>
+                <td class="span108 f9">预支金额<span>
+                  <input style="width:60px;border-bottom:#333 solid 1px;">
+                  </span></td>
+              </tr>
+              <tr class="h35">
+                <td class="span532	">审核金额</td>
+                <td class="span313 left">审核报销金额:<span>
+                  <input style="width:60px;border-bottom:#333 solid 1px;">
+                  </span></td>
+                <td class="span108 f9">应补或退金额:<span>
+                  <input style="width:50px;border-bottom:#333 solid 1px;">
+                  </span></td>
+              </tr>
+              <tr class="h21 noborder">
+                <td colspan="3" class="span600 noborder left"><span style="padding-left:40px;">报系领导:</span><span style="padding-left:80px;">总编辑/总经理:</span><span style="padding-left:80px;">分管领导:</span><span style="padding-left:50px;">部门/版块负责人:</span></td>
+              </tr>
+              <tr class="h21 noborder">
+                <td colspan="3" class="span600 noborder left"><span style="padding-left:40px;">财务审核人:</span><span style="padding-left:200px;"> 出纳:</span><span style="padding-left:80px;"> 收款人:<u>　　　　　</u></span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="page-header">
+            <h5></h5>
+            <h5></h5>
+          </div>
+        </div>
+        <!-- End  --> 
+        
+      </div>
+      <!-- End .row-fluid --> 
+      <!--End page --> 
+      
+    </div>
+    <!-- End contentwrapper --> 
+  </div>
+  <!-- End #content --> 
+  <br/><br/>
+  <div class="the_button noprint"><input name="" type="button" value="打印"  onclick="javascrīpt:window.print();"/><input name="" type="button" value="返回" onclick="location.href='index.html'" /></div>
+</div>
+<!-- End #wrapper -->
+
+</body>
+</html>

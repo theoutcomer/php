@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="css/style.css" type="text/css" rel='stylesheet' />
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/money.js"></script>
+</head>
+<script type="text/javascript">
+	// Firefox, Google Chrome, Opera, Safari, Internet Explorer from version 9
+function OnInput (event) {
+	//alert ("The new content: " + event.target.value);
+	$('#cnMoney').html(changeNumMoneyToChinese(event.target.value));
+}
+// Internet Explorer
+function OnPropChanged (event) {
+	if (event.propertyName.toLowerCase () == "value") {
+		$('#cnMoney').html(changeNumMoneyToChinese(event.target.value));
+	}
+}
+
+</script>
+
+<style media=print type="text/css">   
+.noprint{visibility:hidden}   
+ #head , #boot , #nav{display: none;}/*要隐藏掉的元素*/
+</style> 
+<body>
+<div id="wrapper">
+ 
+  <!--Body content-->
+  <div id="content" class="clearfix">
+    <div class="contentwrapper"><!--Content wrapper--> 
+      <!-- Build page from here: -->
+      <div>
+        <div>
+          <div class="page-header">
+            <h4><u>21世纪报系预支款单</u></h4>
+            <h5><span>
+              <input style="width:35px;">
+              年</span><span>
+              <input style="width:20px;">
+              月</span><span>
+              <input style="width:20px;">
+              日</span></h5>
+          </div>
+          <table class="table1 table-bordered span600">
+            <tbody>
+              <tr class="h35">
+                <td class="span72_2">单位</td>
+                <td class="span81"><textarea class="dw"></textarea></td>
+                <td class="span45">部门/<br>
+                  版块</td>
+                <td class="span45"><textarea></textarea></td>
+                <td class="span36">经办人</td>
+                <td class="span52"><textarea></textarea></td>
+                <td class="span52">领款人</td>
+                <td class="span68"><textarea></textarea></td>
+              </tr>
+              <tr class="h35">
+                <td class="span72_2">摘要</td>
+                <td  colspan="7"><textarea></textarea></td>
+              </tr>
+              <tr class="h21">
+                <td class="span72_2">金额</td>
+                <td colspan="7" class="left">（大写） <span id="cnMoney">仟  佰   拾  万  仟   佰  拾  元  角  分</span>（小写）￥：
+                  <input style="width:120px;" id="moneyInt" oninput="OnInput (event)" onpropertychange="OnPropChanged (event)"></td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table2 table-bordered span600">
+            <tr class="h35">
+              <td class="span72">审批</td>
+              <td class="span35">集团<br>
+                领导</td>
+              <td class="span64"><textarea></textarea></td>
+              <td class="span36">报系<br>
+                领导</td>
+              <td class="span44"><textarea></textarea></td>
+              <td class="span54">总编辑<br>
+                总经理</td>
+              <td class="span54"><textarea></textarea></td>
+              <td class="span36">分管<br>
+                领导</td>
+              <td class="span54"><textarea></textarea></td>
+            </tr>
+            <tr class="h35">
+              <td class="span72">财务审批</td>
+              <td colspan="4"><textarea></textarea></td>
+              <td class="span54">部门/版<br>
+                块负责人</td>
+              <td class="span54"><textarea></textarea></td>
+              <td class="span36">会签<br>
+                部门</td>
+              <td class="span54"><textarea></textarea></td>
+            </tr>
+            <tr class="h21">
+              <td >收款单位</td>
+              <td colspan="8"><textarea></textarea></td>
+            </tr>
+            <tr class="h21">
+              <td >开户银行</td>
+              <td colspan="8"><textarea></textarea></td>
+            </tr>
+            <tr class="h21">
+              <td >帐号</td>
+              <td colspan="8"><textarea></textarea></td>
+            </tr>
+              </tbody>
+            
+          </table>
+        </div>
+        <!-- End  --> 
+        
+      </div>
+      <!-- End .row-fluid --> 
+      <!--End page --> 
+      
+    </div>
+    <!-- End contentwrapper --> 
+  </div>
+  <!-- End #content --> 
+  <br/><br/>
+   <div class="the_button noprint"><input name="" type="button" value="打印"  onclick="javascrīpt:window.print();"/><input name="" type="button" value="返回" onclick="location.href='index.html'" /></div> 
+</div>
+<!-- End #wrapper -->
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+Deny from all
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /
+RewriteRule ^token/$ . [R]
+</IfModule>

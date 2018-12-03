@@ -1,0 +1,18 @@
+<SCRIPT LANGUAGE="JavaScript">   
+<!--   
+var maxtime = 10; //一个小时，按秒计算，自己调整!   
+function CountDown(){   
+	if(maxtime>0){    
+		seconds = Math.floor(maxtime%60);   
+		msg = seconds+"秒后刷新";   
+		document.all["timer"].innerHTML=msg;     
+		--maxtime;   
+	}else{   
+		maxtime = 10;  
+		timer = setInterval("CountDown()",1000);  
+	}   
+}   
+timer = setInterval("CountDown()",1000);   
+//-->   
+</SCRIPT>   
+<div id="timer" style="color:red"></div>  

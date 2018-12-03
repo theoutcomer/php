@@ -1,0 +1,1 @@
+document.write('<div style="width:310px;height:80px;border:none;padding:0px;margin:0px;overflow:hidden;"><a href="http://cbh.adsame.com/c?z=cbh&la=0&si=1&cg=1&c=5&ci=25&or=560&l=2168&bg=2168&b=2999&u=http://www.21cbr.com/touchstone2014/" target="_blank"><img src="http://adsame.21cbh.com/cbh/2015/01/0_2.jpg" style="width:310px;height:80px;border:none;" /></a></div>');

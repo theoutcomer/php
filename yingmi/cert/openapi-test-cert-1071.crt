@@ -1,0 +1,90 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 187 (0xbb)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=CN, ST=GD, L=Guangzhou, O=Yingmi Wealth Management Corp., CN=Yingmi OpenAPI Root CA/emailAddress=ca@yingmi.cn
+        Validity
+            Not Before: Oct 12 10:48:21 2016 GMT
+            Not After : Oct 12 10:48:21 2017 GMT
+        Subject: C=CN, ST=GD, L=Guangdong, O=Yingmi Wealth Management Corp, OpenAPI-1071, CN=openapi-test-cert-1071/emailAddress=openapi-1071@yingmi.cn
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:d5:40:9e:cd:0b:d5:db:b6:6e:d0:2f:89:1a:6b:
+                    d7:a6:46:e8:9d:fc:03:ee:96:aa:f7:94:01:50:44:
+                    23:a5:32:a1:10:88:6f:e7:3b:8d:7e:0c:32:b7:ce:
+                    29:f9:68:0e:16:1b:d6:be:1a:c0:ad:39:6c:bc:38:
+                    87:fe:c7:cf:78:ae:70:82:75:08:ec:1f:ac:4f:08:
+                    6b:c6:2e:ca:7a:ae:eb:55:ac:7c:e0:27:6e:87:53:
+                    1b:1a:8e:2e:43:1e:2c:a2:69:f1:3e:92:85:ad:c0:
+                    64:f0:30:d5:58:57:0b:1f:64:77:4e:23:c5:7e:40:
+                    f0:fb:89:75:2d:4c:eb:9e:4d:64:0d:25:b2:c0:03:
+                    bb:bf:57:15:a1:b3:8c:a1:b9:3a:0c:8e:7e:68:70:
+                    79:9c:e3:b2:73:e5:96:6b:34:9e:d4:df:f1:1f:65:
+                    d3:a7:55:c5:02:8c:2f:10:15:91:aa:fe:95:a2:95:
+                    5a:40:69:5c:59:00:04:9b:b7:81:af:1d:a0:26:a4:
+                    ec:66:b0:29:1c:27:de:e5:dc:ec:c0:1e:aa:d0:a9:
+                    61:2c:84:df:cf:0a:5a:9f:e3:b6:2c:4f:68:06:2a:
+                    10:10:82:5e:58:f5:61:01:00:66:42:61:ed:3b:53:
+                    48:f9:19:9b:10:72:55:7e:5c:0a:fd:0a:bc:6b:e3:
+                    8f:c1
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                C3:C4:5A:3F:6F:48:1D:9C:48:1D:EF:64:89:66:38:AC:A8:FC:C1:66
+            X509v3 Authority Key Identifier: 
+                keyid:F6:67:24:06:A9:94:94:70:A6:32:DF:D8:D2:21:A1:A6:EA:FF:9E:AC
+                DirName:/C=CN/ST=GD/L=Guangzhou/O=Yingmi Wealth Management Corp./CN=Yingmi OpenAPI Root CA/emailAddress=ca@yingmi.cn
+                serial:9B:7D:04:C6:E1:5D:11:EA
+
+    Signature Algorithm: sha256WithRSAEncryption
+         b3:82:2e:c2:e5:32:03:62:2b:d5:9e:77:96:6f:a0:68:63:62:
+         a0:ed:f1:18:65:a2:b6:cd:d9:ed:f1:0e:6a:e6:55:30:87:1e:
+         c0:fc:08:4e:51:b9:f9:28:04:2a:0a:47:ad:5a:20:73:c7:46:
+         0b:b7:e9:78:0a:16:18:9e:fb:cd:ec:f6:31:fa:ac:7c:c3:91:
+         14:d5:7e:cb:95:71:cb:3a:7e:3f:ef:6d:7c:da:64:c8:46:1c:
+         fd:9c:94:79:30:93:67:46:2f:97:9a:d5:cb:ac:db:20:7f:10:
+         a7:19:e5:f5:1a:e6:f6:df:39:31:28:05:49:96:25:31:e9:96:
+         b5:3b:02:95:65:5b:cb:af:81:d3:2c:b6:62:a9:db:8a:27:d3:
+         9e:94:93:1c:dc:9f:6e:49:0e:f7:96:3b:28:78:22:bb:31:f4:
+         83:f5:81:3c:56:d7:bc:3e:27:38:7f:37:fb:2c:86:6f:89:c5:
+         f1:f9:7a:bb:04:98:39:1a:3e:94:a6:43:0b:d5:f9:13:61:33:
+         c6:ce:38:b4:b3:f3:2e:ad:0a:02:85:78:af:14:08:a2:1e:f0:
+         1a:8d:86:67:41:c8:3e:98:1b:28:c6:16:80:2d:ba:ba:3d:05:
+         f8:f8:3e:ed:83:04:cb:63:c2:00:60:7a:0d:7b:02:54:fb:eb:
+         9d:59:f3:18
+-----BEGIN CERTIFICATE-----
+MIIE6jCCA9KgAwIBAgICALswDQYJKoZIhvcNAQELBQAwgZUxCzAJBgNVBAYTAkNO
+MQswCQYDVQQIEwJHRDESMBAGA1UEBxMJR3Vhbmd6aG91MScwJQYDVQQKEx5ZaW5n
+bWkgV2VhbHRoIE1hbmFnZW1lbnQgQ29ycC4xHzAdBgNVBAMTFllpbmdtaSBPcGVu
+QVBJIFJvb3QgQ0ExGzAZBgkqhkiG9w0BCQEWDGNhQHlpbmdtaS5jbjAeFw0xNjEw
+MTIxMDQ4MjFaFw0xNzEwMTIxMDQ4MjFaMIGsMQswCQYDVQQGEwJDTjELMAkGA1UE
+CBMCR0QxEjAQBgNVBAcTCUd1YW5nZG9uZzE0MDIGA1UEChMrWWluZ21pIFdlYWx0
+aCBNYW5hZ2VtZW50IENvcnAsIE9wZW5BUEktMTA3MTEfMB0GA1UEAxMWb3BlbmFw
+aS10ZXN0LWNlcnQtMTA3MTElMCMGCSqGSIb3DQEJARYWb3BlbmFwaS0xMDcxQHlp
+bmdtaS5jbjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANVAns0L1du2
+btAviRpr16ZG6J38A+6WqveUAVBEI6UyoRCIb+c7jX4MMrfOKfloDhYb1r4awK05
+bLw4h/7Hz3iucIJ1COwfrE8Ia8Yuynqu61WsfOAnbodTGxqOLkMeLKJp8T6Sha3A
+ZPAw1VhXCx9kd04jxX5A8PuJdS1M655NZA0lssADu79XFaGzjKG5OgyOfmhweZzj
+snPllms0ntTf8R9l06dVxQKMLxAVkar+laKVWkBpXFkABJu3ga8doCak7GawKRwn
+3uXc7MAeqtCpYSyE388KWp/jtixPaAYqEBCCXlj1YQEAZkJh7TtTSPkZmxByVX5c
+Cv0KvGvjj8ECAwEAAaOCASkwggElMAkGA1UdEwQCMAAwLAYJYIZIAYb4QgENBB8W
+HU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmljYXRlMB0GA1UdDgQWBBTDxFo/b0gd
+nEgd72SJZjisqPzBZjCBygYDVR0jBIHCMIG/gBT2ZyQGqZSUcKYy39jSIaGm6v+e
+rKGBm6SBmDCBlTELMAkGA1UEBhMCQ04xCzAJBgNVBAgTAkdEMRIwEAYDVQQHEwlH
+dWFuZ3pob3UxJzAlBgNVBAoTHllpbmdtaSBXZWFsdGggTWFuYWdlbWVudCBDb3Jw
+LjEfMB0GA1UEAxMWWWluZ21pIE9wZW5BUEkgUm9vdCBDQTEbMBkGCSqGSIb3DQEJ
+ARYMY2FAeWluZ21pLmNuggkAm30ExuFdEeowDQYJKoZIhvcNAQELBQADggEBALOC
+LsLlMgNiK9Wed5ZvoGhjYqDt8RhlorbN2e3xDmrmVTCHHsD8CE5RufkoBCoKR61a
+IHPHRgu36XgKFhie+83s9jH6rHzDkRTVfsuVccs6fj/vbXzaZMhGHP2clHkwk2dG
+L5ea1cus2yB/EKcZ5fUa5vbfOTEoBUmWJTHplrU7ApVlW8uvgdMstmKp24on056U
+kxzcn25JDveWOyh4Irsx9IP1gTxW17w+Jzh/N/sshm+JxfH5ersEmDkaPpSmQwvV
++RNhM8bOOLSz8y6tCgKFeK8UCKIe8BqNhmdByD6YGyjGFoAturo9Bfj4Pu2DBMtj
+wgBgeg17AlT7651Z8xg=
+-----END CERTIFICATE-----
